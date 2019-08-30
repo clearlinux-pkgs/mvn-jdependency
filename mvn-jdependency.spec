@@ -4,21 +4,21 @@
 #
 Name     : mvn-jdependency
 Version  : 2.0
-Release  : 3
+Release  : 4
 URL      : https://repo1.maven.org/maven2/org/vafer/jdependency/2.0/jdependency-2.0.jar
 Source0  : https://repo1.maven.org/maven2/org/vafer/jdependency/2.0/jdependency-2.0.jar
 Source1  : https://repo1.maven.org/maven2/org/vafer/jdependency/1.0/jdependency-1.0.jar
 Source2  : https://repo1.maven.org/maven2/org/vafer/jdependency/1.0/jdependency-1.0.pom
-Source3  : https://repo1.maven.org/maven2/org/vafer/jdependency/2.0/jdependency-2.0.pom
-Source4  : https://repo1.maven.org/maven2/org/vafer/jdependency/2.1.1/jdependency-2.1.1.jar
-Source5  : https://repo1.maven.org/maven2/org/vafer/jdependency/2.1.1/jdependency-2.1.1.pom
+Source3  : https://repo1.maven.org/maven2/org/vafer/jdependency/1.1/jdependency-1.1.jar
+Source4  : https://repo1.maven.org/maven2/org/vafer/jdependency/1.1/jdependency-1.1.pom
+Source5  : https://repo1.maven.org/maven2/org/vafer/jdependency/2.0/jdependency-2.0.pom
+Source6  : https://repo1.maven.org/maven2/org/vafer/jdependency/2.1.1/jdependency-2.1.1.jar
+Source7  : https://repo1.maven.org/maven2/org/vafer/jdependency/2.1.1/jdependency-2.1.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: mvn-jdependency-data = %{version}-%{release}
 Requires: mvn-jdependency-license = %{version}-%{release}
-BuildRequires : apache-maven
-BuildRequires : buildreq-mvn
 
 %description
 No detailed description available
@@ -56,14 +56,20 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/1
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/1.0
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/1.0/jdependency-1.0.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/1.1
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/1.1/jdependency-1.1.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/1.1
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/1.1/jdependency-1.1.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2.0
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2.0/jdependency-2.0.pom
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2.0/jdependency-2.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2.1.1
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2.1.1/jdependency-2.1.1.jar
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2.1.1/jdependency-2.1.1.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2.1.1
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2.1.1/jdependency-2.1.1.pom
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2.1.1/jdependency-2.1.1.pom
 
 
 %files
@@ -73,6 +79,8 @@ cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/vafer/jdependency/2
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/vafer/jdependency/1.0/jdependency-1.0.jar
 /usr/share/java/.m2/repository/org/vafer/jdependency/1.0/jdependency-1.0.pom
+/usr/share/java/.m2/repository/org/vafer/jdependency/1.1/jdependency-1.1.jar
+/usr/share/java/.m2/repository/org/vafer/jdependency/1.1/jdependency-1.1.pom
 /usr/share/java/.m2/repository/org/vafer/jdependency/2.0/jdependency-2.0.jar
 /usr/share/java/.m2/repository/org/vafer/jdependency/2.0/jdependency-2.0.pom
 /usr/share/java/.m2/repository/org/vafer/jdependency/2.1.1/jdependency-2.1.1.jar
